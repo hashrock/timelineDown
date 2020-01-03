@@ -1,22 +1,21 @@
 {
-  "name": "timelinedown",
+  "name": "@hashrock/timelinedown",
   "version": "1.0.0",
-  "description": "",
+  "description": "A funny wrapper for gsap/TimelineMax",
   "main": "index.js",
-  "unpkg": "index.js",
-  "jsdelivr": "index.js",
-  "module": "src/index.js",
+  "unpkg": "index.browser.js",
+  "jsdelivr": "index.browser.js",
+  "module": "index.js",
   "directories": {
     "example": "example"
-  },
-  "scripts": {
-    "pretest": "rollup -c",
-    "prepublishOnly": "rm -rf dist && yarn test"
   },
   "keywords": [],
   "author": "hashrock",
   "license": "MIT",
   "dependencies": {
     "gsap": "^3.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
