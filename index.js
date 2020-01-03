@@ -4,7 +4,7 @@ module.exports = function timelineDown(el, str, frames, options) {
   const tl = new TimelineMax(options);
   const frameDuration =
     options && options.frameDuration ? options.frameDuration : 0.1;
-  const time = 0;
+  let time = 0;
   for (let i = 0; i < str.length; i++) {
     const ch = str[i];
     if (ch.match(/[0-9]/)) {
