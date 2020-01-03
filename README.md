@@ -4,6 +4,10 @@ A funny wrapper for `gsap/TimelineMax`
 
 [![npm version](https://badge.fury.io/js/%40hashrock%2Ftimelinedown.svg)](https://badge.fury.io/js/%40hashrock%2Ftimelinedown)
 
+
+![timelinedown](https://user-images.githubusercontent.com/3132889/71725657-20d4ed80-2e78-11ea-9905-4df8c23fd2fd.gif)
+
+
 # Usage
 
 ## From CDN
