@@ -10,7 +10,7 @@ A funny wrapper for `gsap/TimelineMax`
 
 ```
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<script src="https://unpkg.com/@hashrock/timelinedown@1.0.0/index.js"></script>
+<script src="https://unpkg.com/@hashrock/timelinedown@1.0.2/index.js"></script>
 
 <script>
 const str = "------------0----1--2";
