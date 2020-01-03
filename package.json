@@ -1,0 +1,22 @@
+{
+  "name": "timelinedown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "unpkg": "index.js",
+  "jsdelivr": "index.js",
+  "module": "src/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "pretest": "rollup -c",
+    "prepublishOnly": "rm -rf dist && yarn test"
+  },
+  "keywords": [],
+  "author": "hashrock",
+  "license": "MIT",
+  "dependencies": {
+    "gsap": "^3.0.4"
+  }
+}

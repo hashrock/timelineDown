@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #obj {
+        background: rebeccapurple;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="obj"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="../index.js"></script>
+    <script>
+      const str = "------------0----1--2";
+      const frames = [
+        { x: 200 },
+        { y: 200, ease: Bounce.easeOut },
+        { opacity: 0 }
+      ];
+
+      const tl = timelineDown("#obj", str, frames, {
+        repeat: 99,
+        frameDuration: 0.1
+      });
+    </script>
+  </body>
+</html>
