@@ -2,6 +2,8 @@
 
 A funny wrapper for `gsap/TimelineMax`
 
+[![npm version](https://badge.fury.io/js/%40hashrock%2Ftimelinedown.svg)](https://badge.fury.io/js/%40hashrock%2Ftimelinedown)
+
 # Usage
 
 ## From CDN
