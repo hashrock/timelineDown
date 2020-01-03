@@ -4,9 +4,7 @@ A funny wrapper for `gsap/TimelineMax`
 
 [![npm version](https://badge.fury.io/js/%40hashrock%2Ftimelinedown.svg)](https://badge.fury.io/js/%40hashrock%2Ftimelinedown)
 
-
 ![timelinedown](https://user-images.githubusercontent.com/3132889/71725657-20d4ed80-2e78-11ea-9905-4df8c23fd2fd.gif)
-
 
 # Usage
 
@@ -18,13 +16,13 @@ A funny wrapper for `gsap/TimelineMax`
 
 <script>
 const str = "------------0----1--2";
-const frames = [
+const keyframes = [
   { x: 200 },
   { y: 200, ease: Bounce.easeOut },
   { opacity: 0 }
 ];
 
-const tl = timelineDown("#obj", str, frames, {
+const tl = timelineDown("#obj", str, keyframes, {
   repeat: 99,
   frameDuration: 0.1
 });
@@ -39,13 +37,13 @@ import timelineDown from "@hashrock/timelinedown";
 import { Bounce } from "gsap";
 
 const str = "------------0----1--2";
-const frames = [
+const keyframes = [
   { x: 200 },
   { y: 200, ease: Bounce.easeOut },
   { opacity: 0 }
 ];
 
-timelineDown("#obj", str, frames, {
+timelineDown("#obj", str, keyframes, {
   repeat: 99,
   frameDuration: 0.1
 });
