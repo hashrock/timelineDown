@@ -16,20 +16,60 @@
   </head>
   <body>
     <div id="obj"></div>
+
+    <div
+      data-timeline="--0--0--1-----"
+      data-keyframe-0="x: 200"
+      data-keyframe-1="y: 200, ease: 'bounce.out'"
+      data-timeline-options="repeat: 99, frameDuration: 0.1"
+    >
+      Hello
+    </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
     <script src="../dist/index.js"></script>
     <script>
-      const str = "--0--0--1----------2";
-      const keyframes = [
-        { x: 200 },
-        { y: 200, scale: 0.5, ease: Bounce.easeOut },
-        { opacity: 0 }
-      ];
+      // const str = "--0--0--1----------2";
+      // const keyframes = [
+      //   { x: 200 },
+      //   { y: 200, scale: 0.5, ease: Bounce.easeOut },
+      //   { opacity: 0 }
+      // ];
 
-      const tl = timelineDown("#obj", str, keyframes, {
-        repeat: 99,
-        frameDuration: 0.1
-      });
+      // const tl = timelineDown("#obj", str, keyframes, {
+      //   repeat: 99,
+      //   frameDuration: 0.1
+      // });
+
+      function parseDataAttrs(keyframe) {
+        const raw = keyframe.split(",").map(i => i.split(":"));
+        const pair = raw.reduce((result, current) => {
+          result[current[0].trim()] = JSON.parse(
+            current[1].trim().replace(/'/g, '"')
+          );
+          return result;
+        }, {});
+        return pair;
+      }
+
+      function attach(document) {
+        const els = document.querySelectorAll("*[data-timeline]");
+        for (let el of els) {
+          const timeline = el.dataset.timeline;
+          const keyframes = [];
+          for (let i = 0; i < 10; i++) {
+            const keyframe = el.dataset["keyframe-" + i];
+            if (keyframe === undefined) {
+              break;
+            }
+            keyframes.push(parseDataAttrs(keyframe));
+          }
+          const options = el.dataset["timelineOptions"];
+          const optionsObj = options ? parseDataAttrs(options) : {};
+          timelineDown(el, timeline, keyframes, options);
+        }
+      }
+
+      attach(document);
     </script>
   </body>
 </html>
