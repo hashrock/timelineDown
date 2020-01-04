@@ -11,8 +11,8 @@ A funny wrapper for `gsap/TimelineMax`
 ## From CDN
 
 ```
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@hashrock/timelinedown@1.0.3/index.browser.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@hashrock/timelinedown@1.0.4/dist/index.js"></script>
 
 <script>
 const str = "------------0----1--2";

@@ -1,5 +1,9 @@
 import gsap from "gsap";
 
+function addKeyframe(tl, el, time, frame) {
+  tl.to(el, time, { ...frame });
+}
+
 export default function timelineDown(el, str, frames, options) {
   const tl = gsap.timeline(options);
   const frameDuration =
@@ -10,15 +14,14 @@ export default function timelineDown(el, str, frames, options) {
     const ch = str[i];
     if (ch.match(/[0-9]/)) {
       const frameIndex = parseInt(ch, 10);
-      tl.to(el, time, frames[frameIndex]);
+      addKeyframe(tl, el, time, frames[frameIndex]);
       totalTime -= time;
       time = 0;
     }
     time += frameDuration;
   }
   //Wait until timeline end
-  const last = { ...frames[str.length - 1] };
-  tl.to(el, totalTime, last);
+  addKeyframe(tl, el, totalTime, frames[str.length - 1]);
 
   return tl;
 }
