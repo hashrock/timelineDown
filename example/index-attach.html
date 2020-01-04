@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #obj {
+        background: rebeccapurple;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="obj"
+      data-timeline="--0--0--1-----"
+      data-keyframe-0="x: 200"
+      data-keyframe-1="y: 200, ease: 'bounce.out'"
+      data-timeline-options="repeat: 99, frameDuration: 0.1"
+    >
+      Hello
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+    <script src="../dist/index.js"></script>
+    <script src="../extra/attach.js"></script>
+  </body>
+</html>
