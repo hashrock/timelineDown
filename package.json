@@ -2,10 +2,10 @@
   "name": "@hashrock/timelinedown",
   "version": "1.0.3",
   "description": "A funny wrapper for gsap/TimelineMax",
-  "main": "index.js",
-  "unpkg": "index.browser.js",
-  "jsdelivr": "index.browser.js",
-  "module": "index.js",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
+  "module": "dist/index.js",
   "directories": {
     "example": "example"
   },
@@ -17,5 +17,13 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.7.7",
+    "rollup": "^1.27.14",
+    "rollup-plugin-babel": "^4.3.3"
+  },
+  "scripts": {
+    "prepare": "rollup -c"
   }
 }

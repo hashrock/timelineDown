@@ -1,13 +1,15 @@
-function timelineDown(el, str, frames, options) {
-  var tl = new TimelineMax(options);
-  var frameDuration =
+import gsap from "gsap";
+
+export default function timelineDown(el, str, frames, options) {
+  const tl = gsap.timeline(options);
+  const frameDuration =
     options && options.frameDuration ? options.frameDuration : 0.1;
-  var time = 0;
+  let time = 0;
   var totalTime = frameDuration * str.length;
-  for (var i = 0; i < str.length; i++) {
-    var ch = str[i];
+  for (let i = 0; i < str.length; i++) {
+    const ch = str[i];
     if (ch.match(/[0-9]/)) {
-      var frameIndex = parseInt(ch, 10);
+      const frameIndex = parseInt(ch, 10);
       tl.to(el, time, frames[frameIndex]);
       totalTime -= time;
       time = 0;

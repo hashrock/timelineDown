@@ -16,18 +16,17 @@
   </head>
   <body>
     <div id="obj"></div>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <script src="../index.browser.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+    <script src="../dist/bundle.js"></script>
     <script>
       const str = "------------0----1--2----";
-      const frames = [
+      const keyframes = [
         { x: 200 },
         { y: 200, ease: Bounce.easeOut },
         { opacity: 0 }
       ];
 
-      const tl = timelineDown("#obj", str, frames, {
+      const tl = timelineDown("#obj", str, keyframes, {
         repeat: 99,
         frameDuration: 0.1
       });
