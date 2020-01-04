@@ -12,7 +12,7 @@ A funny wrapper for `gsap/TimelineMax`
 
 ```
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@hashrock/timelinedown@1.0.4/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@hashrock/timelinedown@1.0.5/dist/index.js"></script>
 
 <script>
 const str = "------------0----1--2";
@@ -28,6 +28,25 @@ const tl = timelineDown("#obj", str, keyframes, {
 });
 </script>
 
+```
+
+## From CDN using Data Attributes
+
+```html
+<div
+  id="obj"
+  style="background: rebeccapurple; width: 200px; height:200px;"
+  data-timeline="--0--0--1-----"
+  data-keyframe-0="x: 200"
+  data-keyframe-1="y: 200, ease: 'bounce.out'"
+  data-timeline-options="repeat: 99, frameDuration: 0.1"
+>
+  Hello
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@hashrock/timelinedown@1.0.5/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@hashrock/timelinedown@1.0.5/extra/attach.js"></script>
 ```
 
 ## From npm
@@ -51,4 +70,5 @@ timelineDown("#obj", str, keyframes, {
 
 ## More examples
 
-https://codepen.io/hashrock/pen/mdyqBoN
+- https://codepen.io/hashrock/pen/mdyqBoN
+- https://codepen.io/hashrock/pen/JjoOqYJ
