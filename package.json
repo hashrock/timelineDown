@@ -1,6 +1,6 @@
 {
   "name": "@hashrock/timelinedown",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A funny wrapper for gsap/TimelineMax",
   "main": "dist/index.js",
   "unpkg": "dist/index.js",
