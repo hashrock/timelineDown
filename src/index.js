@@ -9,6 +9,8 @@ export default function timelineDown(el, str, frames, options) {
   const frameDuration =
     options && options.frameDuration ? options.frameDuration : 0.1;
   let time = 0;
+
+  tl.from(el, 0, { ...frames[0] });
   var totalTime = frameDuration * str.length;
   for (let i = 0; i < str.length; i++) {
     const ch = str[i];

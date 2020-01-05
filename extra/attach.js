@@ -23,8 +23,20 @@ function attachTimeline(document) {
     }
     const options = el.dataset["timelineOptions"];
     const optionsObj = options ? parseDataAttrs(options) : {};
-    timelineDown(el, timeline, keyframes, optionsObj);
+    const tl = timelineDown(el, timeline, keyframes, optionsObj);
+
+    const scrollMagicOptions = el.dataset["scrollmagic"];
+    if (scrollMagicOptions) {
+      const scrollMagicOptionsObj = parseDataAttrs(scrollMagicOptions);
+      new ScrollMagic.Scene({
+        triggerElement: el,
+        ...scrollMagicOptionsObj
+      })
+        .setTween(tl)
+        .addTo(scrollMagicController);
+    }
   }
 }
+let scrollMagicController = ScrollMagic ? new ScrollMagic.Controller() : null;
 
 attachTimeline(document);
